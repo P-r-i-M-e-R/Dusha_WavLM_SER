@@ -9,7 +9,7 @@ Transformer — Microsoft wavlm-base (95M parameters) fine-tuned end-to-end on r
 Results: WavLM achieves macro-F1 0.656 vs. 0.553 for the CNN baseline — a +18.7% relative gain across all four emotion classes, with the largest improvements on minority classes (angry, positive).
 Training was run on Kaggle (2× Tesla T4, 30 GB RAM) on the full dataset of ~197k clips (~270 h) split 70/15/15 stratified.
 
-Difference in versions:
+## Difference in versions:
 - v1 consist of first attempt of training models. It has lower f1 metric comparing to others, but it most stable with fully completed pipeline.
 - v2 has changed configuration to achieve better metrics. It has interrupted transformer training on second epoch (becase of GPU Kaggle limits), but still shows better results for both models (Also WavLM still better than CNN)
 - v3 bonus attempt with trying to achieve better results. It gets better f1 metric than v2 version but interrupted by early stopping during the training (Also the best metric acieved only on 3 epoch out of 8)
